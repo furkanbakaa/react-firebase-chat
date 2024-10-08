@@ -1,8 +1,9 @@
 import { useState } from "react"
 import "./chatList.css"
+import AddUser from "./addUser/addUser"
 
 const ChatList = () => {
-    const [addMode,setAddMode] = useState(false)
+    const [addMode,setAddMode] = useState(false); //when click + button search bar will appear.
     return (
         <div className="chatList">
             <div className="search">
@@ -41,8 +42,9 @@ const ChatList = () => {
                     <p>Hello!!</p>
                 </div>
             </div>
+            {addMode && <AddUser/>}
         </div>
-    )
-}
+    );
+};
 
 export default ChatList
